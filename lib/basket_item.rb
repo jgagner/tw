@@ -1,9 +1,11 @@
+require 'bigdecimal'
+
 class BasketItem
-  attr_accessor :price
-  attr_accessor :name
+  attr_reader :price
+  attr_reader :name
 
   def initialize(name,price)
-    @price = price
+    @price = BigDecimal.new(price)
     @name = name
   end
 

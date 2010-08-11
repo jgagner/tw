@@ -3,7 +3,7 @@ require 'taxable_basket_item'
 describe TaxableBasketItem do
 
   before(:each) do
-    @basket_item = TaxableBasketItem.new("test name", 42.00)
+    @basket_item = TaxableBasketItem.new("test name", "42.00")
   end
 
   #shared examples 

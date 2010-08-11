@@ -5,7 +5,7 @@ require 'bigdecimal/util'
 describe TaxableImportedBasketItem do
 
   before(:each) do
-    @basket_item = TaxableImportedBasketItem.new("test name", 42.00)
+    @basket_item = TaxableImportedBasketItem.new("test name", "42.00")
   end
 
   #shared examples

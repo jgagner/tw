@@ -3,7 +3,7 @@ require 'basket_item'
 describe BasketItem do
 
   before(:each) do
-    @basket_item = BasketItem.new("test name",42.00)
+    @basket_item = BasketItem.new("test name","42.00")
   end
 
   it_should_behave_like "basket item"
