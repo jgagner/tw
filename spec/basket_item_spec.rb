@@ -1,5 +1,6 @@
 require 'spec_helper'
 require 'basket_item'
+
 describe BasketItem do
 
   before(:each) do

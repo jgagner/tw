@@ -1,6 +1,7 @@
 shared_examples_for 'basket item' do
 
-  describe "properites " do 
+  describe "properites " do
+    
     it "should accept and report a name" do
       @basket_item.name.should eql "test name"
     end
@@ -11,6 +12,7 @@ shared_examples_for 'basket item' do
   end
 
   describe "#total_item_amount" do
+
     before(:each) do
       @basket_item.stub!(:tax_amount).and_return 21
       @basket_item.stub!(:price).and_return 21
@@ -23,9 +25,13 @@ shared_examples_for 'basket item' do
 end
 
 shared_examples_for 'taxable basket item' do
+
   describe "#total_tax" do
+
     it "should calculate the tax with the price and tax rate" do
+
       @basket_item.should_receive(:calculate_tax) do |price, taxrate|
+
         price.should eql @basket_item.price
         taxrate.should eql @basket_item.class::TAXRATE
         42

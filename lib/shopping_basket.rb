@@ -1,8 +1,8 @@
 require 'math_helper'
 require 'bigdecimal'
 require 'bigdecimal/util'
-class ShoppingBasket < Array
 
+class ShoppingBasket < Array
   include MathHelper
 
   def total_tax_amount

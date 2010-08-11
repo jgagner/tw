@@ -1,5 +1,13 @@
 ====================== Notes on Implementation ========================
-
-- Shopping cart could pontentially be constructed via a builder, but requirements did not call for it
+- Shopping carts could pontentially be constructed via a builder, but requirements did not call for it
 - Could store money in terms of cents (integers) to avoid floating point rounding errors
-- No validation
+- Domain Objects are fairly empty. They could potentially be squashed into one class, and having tax rate just be an
+    attribute on the class. To me, the separate domain objects felt cleaner, and formed out of natural progression w/
+    BDD
+- Extending Array: ShoppingBasket technically passes the "is-a" test, but depending on consuming code may or may not be
+    appropriate. It gave quick easy access to Array and Enumberable methods.
+- The "shared_examples" formed out of refactoring, and did not initially exist. Having fairly empty scenarios hints at
+    the possiblity of consolidation of the model classes.
+- The two shared examples could be potentially combined, if one was ok with including the TAXRATE constant, creating
+    a tax_rate method, has_tax_rate class method, etc
+- The math helper mixing in doesn't neccisarily have to exist, as I progressed with BDD, it felt cleaner. 
