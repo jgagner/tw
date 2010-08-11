@@ -29,10 +29,10 @@ class SalesTax
 
     #input 3
     @shopping_baskets << ShoppingBasket.new([
-            BasketItem.new("packet of headache pills", "9.75"),
-            ImportedBasketItem.new("imported chocolates ", "11.25"),
-            TaxableBasketItem.new("bottle of perfume", "18.99"),
-            TaxableImportedBasketItem.new("imported bottle of perfume", "27.99")
+        TaxableImportedBasketItem.new("imported bottle of perfume", "27.99"),
+        TaxableBasketItem.new("bottle of perfume", "18.99"),
+        BasketItem.new("packet of headache pills", "9.75"),
+        ImportedBasketItem.new("imported chocolates ", "11.25"),
         ])
   end
   
@@ -64,7 +64,7 @@ class SalesTax
   end
 
   def print_basket_item basket_item
-    puts "#{basket_item.name}: #{to_currency_string_simple(basket_item.total_item_amount)}"
+    puts "1 #{basket_item.name}: #{to_currency_string_simple(basket_item.total_item_amount)}"
   end
 
   #this method may not be sufficient for all use cases, but works for ours.

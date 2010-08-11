@@ -33,13 +33,13 @@ describe ShoppingBasket do
 
   describe "#total_tax_amount" do
     it "should total the tax from its items" do
-      shopping_basket.total_tax_amount.should eql "6.70"
+      shopping_basket.total_tax_amount.should eql 6.70
     end
   end
 
   describe "#total_purchase_amount" do
     it "should sum all the items including taxes" do
-      shopping_basket.total_purchase_amount.should eql "74.68"
+      shopping_basket.total_purchase_amount.should eql 74.68
     end
   end
 
