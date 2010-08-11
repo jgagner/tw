@@ -1,5 +1,5 @@
 require 'spec_helper'
-
+require 'taxable_basket_item'
 describe TaxableBasketItem do
 
   before(:each) do

@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'imported_basket_item'
 
 describe ImportedBasketItem do
   before(:each) do

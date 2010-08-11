@@ -1,4 +1,5 @@
-require 'spec/spec_helper'
+require 'spec_helper'
+require 'shopping_basket'
 
 describe ShoppingBasket do
   it "should accept a valid basket choice" do
