@@ -16,7 +16,7 @@ describe ShoppingBasket do
         [
             BasketItem.new("packet of headache pills", "9.75"),
             ImportedBasketItem.new("imported chocolates ", "11.25"),
-            TaxableBasketItem.new("bottle of perfume", "42.00"),
+            TaxableBasketItem.new("bottle of perfume", "18.99"),
             TaxableImportedBasketItem.new("imported bottle of perfume", "27.99")
         ]
   end
@@ -31,8 +31,16 @@ describe ShoppingBasket do
     shopping_basket.should include(*self.baskets)
   end
 
-  it "should total the tax from its items" do
-    shopping_basket.total_taxes.should eql 6.70
+  describe "#total_tax_amount" do
+    it "should total the tax from its items" do
+      shopping_basket.total_taxes.should eql 6.70
+    end
+  end
+
+  describe "#total_purchase_amount" do
+    it "should sum all the items including taxes" do
+      shopping_basket.total_purchase_amount.should eql 74.68
+    end
   end
 
 end

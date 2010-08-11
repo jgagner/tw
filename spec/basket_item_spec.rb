@@ -9,6 +9,6 @@ describe BasketItem do
   it_should_behave_like "basket item"
 
   it "should calculate a total tax amount of 0" do
-    @basket_item.total_tax.should eql 0
+    @basket_item.tax_amount.should eql 0
   end
 end

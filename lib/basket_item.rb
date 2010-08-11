@@ -9,5 +9,9 @@ class BasketItem
     @name = name
   end
 
-  def total_tax; 0; end
+  def tax_amount; 0; end
+
+  def total_item_amount
+    tax_amount + price
+  end
 end

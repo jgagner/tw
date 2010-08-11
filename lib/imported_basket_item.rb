@@ -4,7 +4,7 @@ class ImportedBasketItem < BasketItem
   include MathHelper
   TAXRATE = 0.05
 
-  def total_tax
+  def tax_amount
     calculate_tax(price,TAXRATE)
   end
 end

@@ -6,7 +6,7 @@ class TaxableImportedBasketItem < BasketItem
   include MathHelper
   TAXRATE = ImportedBasketItem::TAXRATE + TaxableBasketItem::TAXRATE
 
-  def total_tax
+  def tax_amount
     calculate_tax(price, TAXRATE)
   end
 end
