@@ -1,22 +1,14 @@
 require 'spec_helper'
 
 describe BasketItem do
-  describe "accessors" do
 
-    it "should accept and report a name" do
-      item = BasketItem.new("test name",0)
-      item.name.should eql "test name"
-    end
+  before(:each) do
+    @basket_item = BasketItem.new("test name",42.00)
+  end
 
-    it "should accept and report a price" do
-      item = BasketItem.new("",42)
-      item.price.should be 42
-    end
+  it_should_behave_like "basket item"
 
-    it "should calculate a total tax amount of 0" do
-      item = BasketItem.new("",42)
-      item.total_tax.should eql 0
-    end
-    
+  it "should calculate a total tax amount of 0" do
+    @basket_item.total_tax.should eql 0
   end
 end
