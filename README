@@ -1,0 +1,5 @@
+====================== Notes on Implementation ========================
+
+- Shopping cart could pontentially be constructed via a builder, but requirements did not call for it
+- Could store money in terms of cents (integers) to avoid floating point rounding errors
+- No validation
