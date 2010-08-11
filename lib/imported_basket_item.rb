@@ -1,8 +1,9 @@
+require 'math_helper'
 class ImportedBasketItem < BasketItem
-  #Tax
+  include MathHelper
+  TAXRATE = 0.05
 
-  #Define a method to calculate tax percentages
-  def calculate_tax
-
+  def total_tax
+    round_to_nickel(price * TAXRATE)
   end
 end
