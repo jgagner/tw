@@ -8,3 +8,16 @@ shared_examples_for 'basket item' do
   end
 
 end
+
+shared_examples_for 'taxable basket item' do
+  describe "#total_tax" do
+    it "should calculate the tax with the price and tax rate" do
+      @basket_item.should_receive(:calculate_tax) do |price, taxrate|
+        price.should eql @basket_item.price
+        taxrate.should eql @basket_item.class::TAXRATE
+        42
+      end
+      @basket_item.total_tax.should eql 42
+    end
+  end
+end

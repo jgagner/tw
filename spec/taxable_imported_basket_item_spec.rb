@@ -10,15 +10,5 @@ describe TaxableImportedBasketItem do
 
   #shared examples
   it_should_behave_like "basket item"
-
-  describe "#total_tax" do
-    it "should multiply the price and  round to nearest nickel" do
-      @basket_item.should_receive(:round_to_nickel) do |value|
-        value.should eql 6.3
-        42 #return 42 so we can test
-      end
-      @basket_item.total_tax.should eql 42
-    end
-  end
-
+  it_should_behave_like "taxable basket item"
 end

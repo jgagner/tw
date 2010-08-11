@@ -5,6 +5,6 @@ class ImportedBasketItem < BasketItem
   TAXRATE = 0.05
 
   def total_tax
-    round_to_nickel(price * TAXRATE)
+    calculate_tax(price,TAXRATE)
   end
 end
